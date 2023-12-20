@@ -4,8 +4,13 @@ import 'package:flutter/material.dart';
 class FeatureBox extends StatelessWidget {
   final Color color;
   final String headerText;
-  
-  const FeatureBox({super.key, required this.color, required this.headerText});
+  final String descriptiveText;
+
+  const FeatureBox(
+      {super.key,
+      required this.color,
+      required this.headerText,
+      required this.descriptiveText});
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +25,32 @@ class FeatureBox extends StatelessWidget {
           Radius.circular(15),
         ),
       ),
-      child: Column(
-        children: [
-          Text(
-            headerText,
-            style: const TextStyle(
-              fontFamily: 'Cera Pro',
-              color: Pallete.blackColor,
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20).copyWith(
+          left: 15,
+        ),
+        child: Column(
+          children: [
+            Text(
+              headerText,
+              style: const TextStyle(
+                fontFamily: 'Cera Pro',
+                color: Pallete.blackColor,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-        ],
+            Text(
+              descriptiveText,
+              style: const TextStyle(
+                fontFamily: 'Cera Pro',
+                color: Pallete.blackColor,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
