@@ -31,22 +31,29 @@ class FeatureBox extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Text(
-              headerText,
-              style: const TextStyle(
-                fontFamily: 'Cera Pro',
-                color: Pallete.blackColor,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                headerText,
+                style: const TextStyle(
+                  fontFamily: 'Cera Pro',
+                  color: Pallete.blackColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-            Text(
-              descriptiveText,
-              style: const TextStyle(
-                fontFamily: 'Cera Pro',
-                color: Pallete.blackColor,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+            const SizedBox(height: 3),
+            Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: Text(
+                descriptiveText,
+                style: const TextStyle(
+                  fontFamily: 'Cera Pro',
+                  color: Pallete.blackColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],
